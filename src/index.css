@@ -124,21 +124,29 @@ p {
   }
 }
 /*  global classes */
-.box {
+main {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .container {
-  background-color: #fff;
+  display: flex;
+  position: relative;
   width: 80vw;
   min-width: 400px;
+  max-width: 700px;
   height: fit-content;
+  background-color: #fff;
   border-radius: 5px;
-  position: relative;
-  display: flex;
+}
+
+.container h1  {
+  flex: 1;
+  font-size: 18px;
+  padding: 60px 30px;
 }
 
 .rectangle,
@@ -163,12 +171,6 @@ p {
   right: -40px;
 }
 
-.heading {
-  font-size: 18px;
-  flex: 1.2;
-  padding: 60px 30px;
-}
-
 .accordion {
   flex: 2.5;
   display: flex;
@@ -176,7 +178,7 @@ p {
   padding: 15px 10px;
 }
 
-.question-box {
+section {
   display: flex;
   flex-direction: column;
   border: 2px solid var(--clr-grey-special);
@@ -185,11 +187,11 @@ p {
   border-radius: 4px;
 }
 
-.question {
+header {
   display: flex;
 }
 
-.question h4 {
+header h4 {
   flex: 1;
 }
 
@@ -202,7 +204,7 @@ p {
   display: none;
 }
 
-.btn {
+button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -213,7 +215,7 @@ p {
   align-items: center;
 }
 
-.sign {
+button p {
   color: var(--clr-pink);
   margin: auto;
 }
@@ -221,13 +223,10 @@ p {
 @media screen and (max-width: 600px) {
   .container {
     flex-direction: column;
-  }
-
-  .heading {
-    padding: 15px;
-  }
-
-  .container {
     min-width: 300px;
+  }
+
+  .container h1 {
+    padding: 15px;
   }
 }

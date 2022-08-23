@@ -6,15 +6,15 @@ const Question = ({ title, info }) => {
     setIsOpen(!isOpen)
   }
   return (
-    <div className="question-box">
-      <div className="question">
+    <section>
+      <header>
         <h4>{title}</h4>
-      <button className="btn" onClick={toggleButton}>
-        <p className="sign">{isOpen ? <AiOutlineMinus/> : <AiOutlinePlus/> }</p>
-      </button>
-      </div>
+        <button onClick={toggleButton}>
+          <p>{isOpen ? <AiOutlineMinus/> : <AiOutlinePlus/> }</p>
+        </button>
+      </header>
         <p className={isOpen ? "d-block" : "d-hidden"}>{info}</p>
-    </div>
+    </section>
   );
 };
 
