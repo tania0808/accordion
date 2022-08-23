@@ -177,9 +177,8 @@ p {
 }
 
 .question-box {
-  flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   border: 2px solid var(--clr-grey-special);
   margin-bottom: 5px;
   padding: 10px;
@@ -187,6 +186,10 @@ p {
 }
 
 .question {
+  display: flex;
+}
+
+.question h4 {
   flex: 1;
 }
 
